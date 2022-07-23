@@ -26,12 +26,52 @@
       font-family: var(--principal-font);
     }
 
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     body{
         font-family: 'Quicksand', sans-serif;
+    
+    }
+    
+    main {
+      padding-top: 8rem;
+    }
+
+    .login_logo, .login_logo_image{
+      width: 20rem;
+      height: 4rem;
+      margin: 0 auto;
+    }
+
+    .login_form {
+      display: flex;
+      flex-wrap: wrap;
+      width: 30rem;
+      margin: 0 auto;
+      padding: 3rem 0;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
-  
+  <main>
+    <figure class="login_logo">
+      <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
+    </figure>
+    <form class="login_form" action="#">
+      <label for="email">
+        <span>Email addres</span><br>
+        <input type="email" id="email" placeholder="camilayokoo@gmail.com">
+      </label>
+      <label for="password">
+        <span>Password</span> <br>
+        <input type="password" id="password" placeholder="*********">
+      </label>
+    </form>
+  </main>
 </body>
 </html>
