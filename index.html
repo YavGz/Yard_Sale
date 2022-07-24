@@ -30,15 +30,11 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;      
     }
 
-    body{
-        font-family: 'Quicksand', sans-serif;
-    
-    }
-    
-    main {
-      padding-top: 8rem;
+    header {
+      padding: 8rem 0 4rem;
     }
 
     .login_logo, .login_logo_image{
@@ -47,31 +43,57 @@
       margin: 0 auto;
     }
 
-    .login_form {
+    .form_container {
       display: flex;
-      flex-wrap: wrap;
+      justify-content : center; 
       width: 30rem;
+      padding: 0 2%;
       margin: 0 auto;
-      padding: 3rem 0;
-      justify-content: center;
+    }
+    .form_container label {
+      font-weight: 700;
+    }
+    .form_container input {
+      width: 100%;
+      min-height: 3rem;
+      margin: .2rem 0 1.2rem;
+      padding: 0.5rem;
+      color: #232830bd;
+    }
+    .form_login_buttons__container {
+      text-align: center;
+    }
+    button {
+      width: 30rem;
+      margin: 2rem 0 1rem;
+      min-height: 3.5rem;
     }
   </style>
 </head>
 <body>
-  <main>
+  <header>
     <figure class="login_logo">
       <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
     </figure>
-    <form class="login_form" action="#">
-      <label for="email">
-        <span>Email addres</span><br>
-        <input type="email" id="email" placeholder="camilayokoo@gmail.com">
-      </label>
-      <label for="password">
-        <span>Password</span> <br>
-        <input type="password" id="password" placeholder="*********">
-      </label>
-    </form>
+  </header>
+  <main>
+    <div class="form_container">
+      <form class="login_form" action="#">
+        <label for="email">
+          <span>Email addres</span>
+          <input class="input input_login" type="email" id="email" placeholder="camilayokoo@gmail.com">
+        </label>
+        <label for="password">
+          <span>Password</span>
+          <input class="input input_password" type="password" id="password" placeholder="*********">
+        </label>
+        <div class="form_login_buttons__container">
+          <button type="submit">Log In</button>
+          <a href="">Forgot my password</a>
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
   </main>
 </body>
 </html>
