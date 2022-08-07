@@ -17,6 +17,7 @@
     --very-light-secondary: #C7C7C7;
     --text-input-field: #F7F7F7;
     --hospital-principal: #ACD9B2;
+    --hospital-dark: #75af7d;
     --principal-font: 'Quicksand', sans-serif;
     --secondary-font: 'Roboto', sans-serif;  
     }
@@ -51,6 +52,8 @@
       margin: 0 auto;
     }
     .form_container label {
+      padding: 0.1rem;
+      font-size: 1.2rem;
       font-weight: 700;
     }
     .form_container input {
@@ -58,14 +61,28 @@
       min-height: 3rem;
       margin: .2rem 0 1.2rem;
       padding: 0.5rem;
-      color: #232830bd;
     }
     .form_login_buttons__container {
+      width: 30rem;
+      padding-top: 1.5rem;
       display: grid;
-      grid-template-rows: ;
+      grid-template-areas: 
+      "login"
+      "a"
+      "sign";
+      grid-template-rows: 1fr 8rem 1fr;
+      gap: 1rem 0;
       text-align: center;
+      justify-content: center;
+      justify-items: center;
+      overflow: visible;
     }
-
+    
+    .form_login_buttons__container a {
+      grid-area: a;
+      padding: auto;
+    }
+    
     .input {
       width: 30rem;
       height: 3.6rem;
@@ -73,6 +90,7 @@
       border: solid 0;
       background-color: var(--text-input-field);
     }
+    
     .button {
       width: 30rem;
       height: 4.2rem;
@@ -80,16 +98,48 @@
       border: solid 0;
       border-radius: 1rem;
     }
+    
+    .a_link{
+      height: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: var(--hospital-principal);
+    }
+    .a_link:hover{
+      cursor: pointer;
+      color: var(--hospital-dark);
+      transition: color 0.5s;
+    }
+    
     .main_button {
       font-weight: 700;
-      background-color: var(--hospital-principal);
+      grid-area: login;
       color: var(--white);
+      transition: all 0.3s;
+      background-color: var(--hospital-principal);
     }
+    .main_button:hover {
+      width: 30.5rem;
+      height: 4.3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: var(--hospital-dark);
+    }
+    
     .second_button {
       font-weight: 700;
+      grid-area: sign;
       color: var(--hospital-principal);
       background-color: var(--white);
       border: solid 0.2rem var(--hospital-principal);
+      transition: all 0.3s;
+    }
+    .second_button:hover {
+      width: 30.5rem;
+      height: 4.3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
 
@@ -114,7 +164,7 @@
         </label>
         <div class="form_login_buttons__container">
           <button  class="button main_button" type="submit">Log In</button>
-          <a href="">Forgot my password</a>
+          <a class="a_link" href="">Forgot my password</a>
           <button  class="button second_button"type="submit">Sign Up</button>
         </div>
       </form>
