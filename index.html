@@ -37,6 +37,9 @@
     header {
       padding: 8rem 0 4rem;
     }
+    header nav {
+      display: none;
+    }
 
     .login_logo, .login_logo_image{
       width: 20rem;
@@ -142,6 +145,28 @@
       cursor: pointer;
     }
 
+    @media (min-width:767px) {
+      header, header nav, nav ul {
+        display: flex;
+        width: 100%;
+        font-size: 1.4rem;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      header {
+        width: 100%;
+        padding: 1.5rem 4%;
+        margin-bottom: 12%;
+        justify-content: space-around;
+      }
+      nav ul, ul li {
+        list-style: none;
+      }
+
+      .login_logo, .login_logo_image {
+        height: 3rem;
+      }
+    }
 
   </style>
 </head>
@@ -150,6 +175,39 @@
     <figure class="login_logo">
       <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
     </figure>
+    <nav>
+      <ul>
+        <li>
+          All
+        </li>
+        <li>
+          Clothes
+        </li>
+        <li>
+          Electronics
+        </li>
+        <li>
+          Furniture
+        </li>
+        <li>
+          Toys
+        </li>
+        <li>
+          Others
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Sign In
+        </li>
+        <li>
+          <figure class="shopping_cart">
+            <img src="./icons/icon_shopping_cart.svg" alt="">
+          </figure>
+        </li>
+      </ul>
+
+    </nav>
   </header>
   <main>
     <div class="form_container">
