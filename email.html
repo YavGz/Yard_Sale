@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
   <title>Email</title>
   <style>
     :root{
@@ -50,8 +53,10 @@
       place-items: center;
       max-width: 50rem;
       margin: 0 auto;
+      padding: 0 4%;
+      text-align: center;
+      grid-template-rows: 1fr 2fr 5fr 3fr 2fr;
     }
-    
 
     /* form elements  */
     .input {
@@ -73,7 +78,6 @@
     
     .main_button {
       font-weight: 700;
-      grid-area: login;
       color: var(--white);
       transition: all 0.3s;
       background-color: var(--hospital-principal);
@@ -88,7 +92,6 @@
     
     .second_button {
       font-weight: 700;
-      grid-area: sign;
       color: var(--hospital-principal);
       background-color: var(--white);
       border: solid 0.2rem var(--hospital-principal);
@@ -114,7 +117,35 @@
       transition: color 0.5s;
     }
 
+    /* typographies, sizes and spaces */
+    .layout_grid {
+      font-size: 1.5rem;
+    }
 
+    .layout_grid h3 {
+      font-size: 1.3rem;
+    }
+    
+    .layout_grid p{
+      font-weight: 400;
+    }
+    
+    .layout_grid figure {
+      display: flex;
+      width: 15rem;
+      height: 15rem;
+      align-content: center;
+      justify-content: center;
+      background-color: var(--text-input-field);
+      border-radius: 50%;
+    }
+    
+    .layout_grid figure img {
+      width: 10rem;
+    }
+
+
+    /* Queries */
     @media (min-width:767px) {
       header nav, nav ul {
         display: flex;
@@ -133,6 +164,8 @@
         padding: 1.5rem 4%;
         margin-bottom: 12%;
         justify-content: space-around;
+        box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
+        color: var(--very-light-secondary);
       }
 
       header figure {
@@ -146,6 +179,8 @@
 
       .login_nav {
         grid-area: nav2;
+        color: var(--hospital-principal);
+        font-weight: 700;
       }
 
       nav ul, ul li {
@@ -203,12 +238,12 @@
       <h3>Email has been sent!</h3>
       <p>Please check your inbox for instructions on how to reset the password</p>
       <figure>
-        <img src="" alt="">
+        <img src="./icons/email.svg" alt="Email Icon image">
       </figure>
-      <button>Login</button>
+      <button class="button main_button">Login</button>
       <span>
         Didn’t receive the email? 
-        <a href="">Resend</a>
+        <a href=""  class="a_link">Resend</a>
       </span>
     </div>
   </main>
