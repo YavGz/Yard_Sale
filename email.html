@@ -5,8 +5,212 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Email</title>
+  <style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --wrong: #d65959;
+    --very-light-secondary: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-principal: #ACD9B2;
+    --hospital-dark: #75af7d;
+    --principal-font: 'Quicksand', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;  
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: var(--principal-font);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;     
+    }
+
+    header {
+      padding: 8rem 0 4rem;
+    }
+    header nav {
+      display: none;
+    }
+
+    .login_logo, .login_logo_image{
+      width: 20rem;
+      height: 4rem;
+      margin: 0 auto;
+    }
+
+    /*layout grid  */
+    .layout_grid {
+      display: grid;
+      place-items: center;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    
+
+    /* form elements  */
+    .input {
+      width: 30rem;
+      height: 3.6rem;
+      border-radius: 1rem;
+      border: solid 0;
+      background-color: var(--text-input-field);
+    }
+    
+    .button {
+      width: 30rem;
+      height: 4.2rem;
+      min-height: 3.5rem;
+      border: solid 0;
+      border-radius: 1rem;
+    }
+    
+    
+    .main_button {
+      font-weight: 700;
+      grid-area: login;
+      color: var(--white);
+      transition: all 0.3s;
+      background-color: var(--hospital-principal);
+    }
+    .main_button:hover {
+      width: 30.5rem;
+      height: 4.3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: var(--hospital-dark);
+    }
+    
+    .second_button {
+      font-weight: 700;
+      grid-area: sign;
+      color: var(--hospital-principal);
+      background-color: var(--white);
+      border: solid 0.2rem var(--hospital-principal);
+      transition: all 0.3s;
+    }
+    .second_button:hover {
+      width: 30.5rem;
+      height: 4.3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .a_link{
+      height: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: var(--hospital-principal);
+    }
+    .a_link:hover{
+      cursor: pointer;
+      color: var(--hospital-dark);
+      transition: color 0.5s;
+    }
+
+
+    @media (min-width:767px) {
+      header nav, nav ul {
+        display: flex;
+        width: 100%;
+        font-size: 1.4rem;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr minmax(36rem, 2fr) 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo nav1 none nav2";
+        width: 100%;
+        padding: 1.5rem 4%;
+        margin-bottom: 12%;
+        justify-content: space-around;
+      }
+
+      header figure {
+        grid-area: logo;
+      }
+      
+      .section_nav {
+        background-color: var(--hospital-dark);
+        grid-area: nav1;
+      }
+
+      .login_nav {
+        grid-area: nav2;
+      }
+
+      nav ul, ul li {
+        list-style: none;
+      }
+
+      .login_logo, .login_logo_image {
+        height: 3rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  
+  <header>
+    <figure class="login_logo">
+      <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
+    </figure>
+    <nav class="sections_nav">
+      <ul>
+        <li>
+          All
+        </li>
+        <li>
+          Clothes
+        </li>
+        <li>
+          Electronics
+        </li>
+        <li>
+          Furniture
+        </li>
+        <li>
+          Toys
+        </li>
+        <li>
+          Others
+        </li>
+      </ul>
+    </nav>
+    <nav class="login_nav">
+      <ul>
+        <li>
+          Sign In
+        </li>
+        <li>
+          <figure class="shopping_cart">
+            <img src="./icons/icon_shopping_cart.svg" alt="">
+          </figure>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="layout_grid">
+      <h3>Email has been sent!</h3>
+      <p>Please check your inbox for instructions on how to reset the password</p>
+      <figure>
+        <img src="" alt="">
+      </figure>
+      <button>Login</button>
+      <span>
+        Didn’t receive the email? 
+        <a href="">Resend</a>
+      </span>
+    </div>
+  </main>
 </body>
 </html>

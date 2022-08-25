@@ -47,6 +47,7 @@
       margin: 0 auto;
     }
 
+    /* form  */
     .form_container {
       display: flex;
       justify-content : center; 
@@ -65,6 +66,8 @@
       margin: .2rem 0 1.2rem;
       padding: 0.5rem;
     }
+
+    /* form elements  */
     .form_login_buttons__container {
       width: 30rem;
       padding-top: 1.5rem;
@@ -102,18 +105,6 @@
       border-radius: 1rem;
     }
     
-    .a_link{
-      height: 2rem;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.4rem;
-      color: var(--hospital-principal);
-    }
-    .a_link:hover{
-      cursor: pointer;
-      color: var(--hospital-dark);
-      transition: color 0.5s;
-    }
     
     .main_button {
       font-weight: 700;
@@ -144,21 +135,54 @@
       font-size: 1.5rem;
       cursor: pointer;
     }
+    
+    .a_link{
+      height: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: var(--hospital-principal);
+    }
+    .a_link:hover{
+      cursor: pointer;
+      color: var(--hospital-dark);
+      transition: color 0.5s;
+    }
+
 
     @media (min-width:767px) {
-      header, header nav, nav ul {
+      header nav, nav ul {
         display: flex;
         width: 100%;
         font-size: 1.4rem;
         justify-content: space-evenly;
         align-items: center;
       }
+
       header {
+        display: grid;
+        grid-template-columns: 1fr minmax(36rem, 2fr) 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo nav1 none nav2";
         width: 100%;
         padding: 1.5rem 4%;
         margin-bottom: 12%;
         justify-content: space-around;
       }
+
+      header figure {
+        grid-area: logo;
+      }
+      
+      .section_nav {
+        background-color: var(--hospital-dark);
+        grid-area: nav1;
+      }
+
+      .login_nav {
+        grid-area: nav2;
+      }
+
       nav ul, ul li {
         list-style: none;
       }
@@ -166,6 +190,7 @@
       .login_logo, .login_logo_image {
         height: 3rem;
       }
+
     }
 
   </style>
@@ -175,7 +200,7 @@
     <figure class="login_logo">
       <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
     </figure>
-    <nav>
+    <nav class="sections_nav">
       <ul>
         <li>
           All
@@ -196,6 +221,8 @@
           Others
         </li>
       </ul>
+    </nav>
+    <nav class="login_nav">
       <ul>
         <li>
           Sign In
@@ -206,10 +233,9 @@
           </figure>
         </li>
       </ul>
-
     </nav>
-  </header>
-  <main>
+    </header>
+    <main>
     <div class="form_container">
       <form class="login_form" action="#">
         <label for="email">
