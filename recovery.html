@@ -31,20 +31,35 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;      
+      font-family: 'Quicksand', sans-serif;     
     }
 
     header {
-      padding: 8rem 0 4rem;
+      padding: 4rem 2%;
     }
     header nav {
       display: none;
     }
 
     .login_logo, .login_logo_image{
-      width: 20rem;
-      height: 4rem;
+      width: 18rem;
+      height: 3rem;
       margin: 0 auto;
+    }
+
+    
+    /*layout grid  */
+    .layout_grid {
+      display: grid;
+      place-items: center;
+      max-width: 50rem;
+      margin: 0 auto;
+      padding: 0 4%;
+      text-align: start;
+      grid-template-rows: 2.5rem 8rem 1fr 1fr 4.5rem;
+    }
+    .layout_grid p {
+      text-align: center;
     }
 
     /* form  */
@@ -68,28 +83,8 @@
     }
 
     /* form elements  */
-    .form_login_buttons__container {
-      width: 30rem;
-      padding-top: 1.5rem;
-      display: grid;
-      grid-template-areas: 
-      "login"
-      "a"
-      "sign";
-      grid-template-rows: 1fr 14rem 1fr;
-      gap: 1rem 0;
-      text-align: center;
-      justify-content: center;
-      justify-items: center;
-    }
-    
-    .form_login_buttons__container a {
-      grid-area: a;
-      padding: auto;
-    }
-    
     .input {
-      width: 30rem;
+      min-width: 30rem;
       height: 3.6rem;
       border-radius: 1rem;
       border: solid 0;
@@ -104,10 +99,8 @@
       border-radius: 1rem;
     }
     
-    
     .main_button {
       font-weight: 700;
-      grid-area: login;
       color: var(--white);
       transition: all 0.3s;
       background-color: var(--hospital-principal);
@@ -118,21 +111,6 @@
       font-size: 1.5rem;
       cursor: pointer;
       background-color: var(--hospital-dark);
-    }
-    
-    .second_button {
-      font-weight: 700;
-      grid-area: sign;
-      color: var(--hospital-principal);
-      background-color: var(--white);
-      border: solid 0.2rem var(--hospital-principal);
-      transition: all 0.3s;
-    }
-    .second_button:hover {
-      width: 30.5rem;
-      height: 4.3rem;
-      font-size: 1.5rem;
-      cursor: pointer;
     }
     
     .a_link{
@@ -148,7 +126,20 @@
       transition: color 0.5s;
     }
 
+    /* typographies, sizes and spaces */
+    .layout_grid {
+      font-size: 1.5rem;
+    }
 
+    .layout_grid h3 {
+      font-size: 1.3rem;
+    }
+    
+    .layout_grid p{
+      font-weight: 400;
+    }
+
+    /* Queries */
     @media (min-width:767px) {
       header nav, nav ul {
         display: flex;
@@ -192,10 +183,6 @@
 
       .login_logo, .login_logo_image {
         height: 3rem;
-      }
-
-      .form_login_buttons__container {
-      grid-template-rows: 1fr 8rem 1fr;
       }
     }
 
@@ -243,20 +230,15 @@
     </header>
     <main>
     <div class="form_container">
-      <form class="login_form" action="#">
+      <form class="layout_grid" action="#">
+        <h3>Password Recovery</h3>
+        <p>Inform the email address used to create your account</p>
         <label for="email">
           <span>Email addres</span>
           <input class="input input_login" type="email" id="email" placeholder="camilayokoo@gmail.com">
         </label>
-        <label for="password">
-          <span>Password</span>
-          <input class="input input_password" type="password" id="password" placeholder="*********">
-        </label>
-        <div class="form_login_buttons__container">
-          <button  class="button main_button" type="submit">Log In</button>
-          <a class="a_link" href="">Forgot my password</a>
-          <button  class="button second_button"type="submit">Sign Up</button>
-        </div>
+        <button  class="button main_button" type="submit">Submit</button>
+        <a class="a_link" href="">Back to lo gin</a>
       </form>
     </div>
   </main>
