@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <title>Email</title>
+  <title>Base</title>
   <style>
     :root{
     --white: #FFFFFF;
@@ -20,7 +20,12 @@
     --hospital-principal: #ACD9B2;
     --hospital-dark: #75af7d;
     --principal-font: 'Quicksand', sans-serif;
-    --secondary-font: 'Roboto', sans-serif;  
+    --secondary-font: 'Roboto', sans-serif;
+    --xsm: 1.2rem;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --xl: 2rem;  
     }
 
     html {
@@ -55,20 +60,30 @@
       margin: 0 auto;
       padding: 0 4%;
     }
-    
-    .email_grid{
-      max-width: 50rem;
-      text-align: center;
-      grid-template-rows: 1fr 2fr 5fr 3fr 2fr;
-    }
 
     /* elements  */
+    .label {
+      padding: 0.1rem;
+      font-size: var(--sm);
+      font-weight: 700;
+    }
+    
+    .title{
+      font-size: var(--lg);
+    }
+    
+
     .input {
       width: 30rem;
       height: 3.6rem;
+      padding: 0 2%;
       border-radius: 1rem;
       border: solid 0;
       background-color: var(--text-input-field);
+    }
+
+    .input::placeholder {
+      color: var(--very-light-secondary);
     }
     
     .button {
@@ -79,13 +94,13 @@
       border-radius: 1rem;
     }
     
-    
     .main_button {
       font-weight: 700;
       color: var(--white);
       transition: all 0.3s;
       background-color: var(--hospital-principal);
     }
+
     .main_button:hover {
       width: 30.5rem;
       height: 4.3rem;
@@ -108,64 +123,48 @@
       cursor: pointer;
     }
     
-    .a_link{
-      height: 2rem;
+    .link{
+      height: var(--xl);
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.4rem;
+      font-size: var(--sm);
       color: var(--hospital-principal);
     }
-    .a_link:hover{
+
+    .text_transition:hover{
       cursor: pointer;
       color: var(--hospital-dark);
       transition: color 0.5s;
     }
 
-    /* typographies, sizes and spaces */
-    .layout_grid {
-      font-size: 1.5rem;
-    }
-
-    .layout_grid h3 {
-      font-size: 1.3rem;
-    }
-    
-    .layout_grid p{
-      font-weight: 400;
-    }
-    
-    .layout_grid figure {
-      display: flex;
-      width: 15rem;
-      height: 15rem;
-      align-content: center;
-      justify-content: center;
-      background-color: var(--text-input-field);
-      border-radius: 50%;
-    }
-    
-    .layout_grid figure img {
-      width: 10rem;
-    }
-
-
     /* Queries */
+
+
     @media (min-width:767px) {
       header nav, nav ul {
         display: flex;
         width: 100%;
-        font-size: 1.4rem;
+        font-size: var(--sm);
         justify-content: space-evenly;
         align-items: center;
       }
 
+      nav li {
+        transition: all 0.3s;
+      }
+      
+      nav li:hover {
+        cursor: pointer;
+        color: #a3a3a3 ;
+      }
+
       header {
         display: grid;
-        grid-template-columns: 1fr minmax(36rem, 2fr) 1fr 2fr;
+        grid-template-columns: 1fr minmax(40rem, 2fr) 0.2fr 2fr;
         grid-template-rows: 1fr;
         grid-template-areas: "logo nav1 none nav2";
         width: 100%;
-        padding: 1.5rem 4%;
+        padding: 1.5rem 1.5%;
         margin-bottom: 12%;
         justify-content: space-around;
         box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
@@ -195,13 +194,21 @@
         height: 3rem;
       }
     }
+
+    @media (min-width:1023px) {
+      header{
+        padding: 1.5rem 4%;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <figure class="login_logo">
-      <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
-    </figure>
+    <a href="">
+      <figure class="login_logo">
+        <img class="login_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
+      </figure>
+    </a>
     <nav class="sections_nav">
       <ul>
         <li>
@@ -226,7 +233,7 @@
     </nav>
     <nav class="login_nav">
       <ul>
-        <li>
+        <li class="text_transition">
           Sign In
         </li>
         <li>
@@ -237,19 +244,14 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="layout_grid email_grid">
-      <h3>Email has been sent!</h3>
-      <p>Please check your inbox for instructions on how to reset the password</p>
-      <figure>
-        <img src="./icons/email.svg" alt="Email Icon image">
-      </figure>
-      <button class="button main_button">Login</button>
-      <span>
-        Didn’t receive the email? 
-        <a href=""  class="a_link">Resend</a>
-      </span>
-    </div>
+  <main class="layout_grid">
+    <h3 class="title">Titulo</h3>
+    <label class="label" for="">Label</label>
+    <input type="text" class="input" placeholder="Input">
+    <button class="button">Boton</button>
+    <button class="button main_button">Main button</button>
+    <button class="button second_button">Second button</button>
+    <a href="" class="link text_transition">A href</a>
   </main>
 </body>
 </html>
