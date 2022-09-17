@@ -20,7 +20,12 @@
     --hospital-principal: #ACD9B2;
     --hospital-dark: #75af7d;
     --principal-font: 'Quicksand', sans-serif;
-    --secondary-font: 'Roboto', sans-serif;  
+    --secondary-font: 'Roboto', sans-serif;
+    --xsm: 1.2rem;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --xl: 2rem;  
     }
 
     html {
@@ -91,15 +96,17 @@
     .form_container input {
       width: 100%;
     }
-    .title{
-      font-size: 1.5rem;
+    
+    /* elements  */
+    
+    .main_title{
+      font-size: var(--md);
       padding: 1rem 0 4rem;
     }
     
-    /* form elements  */
-    .label {
+    .label, .title {
       padding: 0.1rem;
-      font-size: 1.2rem;
+      font-size: var(--sm);
       font-weight: 700;
     }
     .input {
@@ -130,19 +137,23 @@
     .main_button:hover {
       width: 30.5rem;
       height: 4.3rem;
-      font-size: 1.5rem;
+      font-size:  1.5rem;
       cursor: pointer;
       background-color: var(--hospital-dark);
     }
     
     .second_button {
       font-weight: 700;
-      grid-area: sign;
       color: var(--hospital-principal);
       background-color: var(--white);
       border: solid 0.2rem var(--hospital-principal);
       transition: all 0.3s;
     }
+    
+    .second_button__account {
+      grid-area: sign;
+    }
+    
     .second_button:hover {
       width: 30.5rem;
       height: 4.3rem;
@@ -154,7 +165,7 @@
       height: 2rem;
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.4rem;
+      font-size: var(--xsm);
       color: var(--hospital-principal);
     }
     .a_link:hover{
@@ -168,14 +179,14 @@
       header nav, nav ul {
         display: flex;
         width: 100%;
-        font-size: 1.4rem;
+        font-size: var(--sm);
         justify-content: space-evenly;
         align-items: center;
       }
 
       header {
         display: grid;
-        grid-template-columns: 1fr minmax(36rem, 2fr) 1fr 2fr;
+        grid-template-columns: 1fr minmax(38rem, 2fr) 1fr 2fr;
         grid-template-rows: 1fr;
         grid-template-areas: "logo nav1 none nav2";
         width: 100%;
@@ -269,7 +280,7 @@
           <input class="input input_password" type="password" id="password" placeholder="*********">
         </label>
       </form>
-      <button  class="button main_button" type="submit">Create</button>
+      <button  class="button second_button second_button__account" type="submit">Edit</button>
     </div>
   </main>
 </body>
