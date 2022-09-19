@@ -21,6 +21,7 @@
     --hospital-dark: #75af7d;
     --principal-font: 'Quicksand', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
+    --card-size: 24rem;
     --xsm: 1.2rem;
     --sm: 1.4rem;
     --md: 1.6rem;
@@ -56,7 +57,9 @@
     /*layout grid  */
     .layout_grid {
       display: grid;
-      place-items: center;
+      grid-template-columns: repeat(auto-fill, var(--card-size));
+      place-content: center;
+      gap: 2rem;
       margin: 0 auto;
       padding: 0 4%;
     }
@@ -69,6 +72,7 @@
     }
     
     .title{
+      font-weight: 700;
       font-size: var(--lg);
     }
     
@@ -137,8 +141,38 @@
       transition: color 0.5s;
     }
 
-    /* Queries */
 
+    .product_info div p:nth-child(2){
+      font-size: var(--sm);
+    }
+
+    .product_card{
+      width: var(--card-size);
+      border-radius: 1rem;
+      background-color: var(--text-input-field);
+      overflow: hidden;
+    }
+    
+    .product_card figure, .product_card img {
+      width: var(--card-size);
+      height: 16rem;
+    }
+    
+    .product_info {
+      display: flex;
+      height: 4.6rem;
+      width: var(--card-size);
+      padding: 0.2rem 1.2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product_info figure , .product_info img {
+      width: 4rem;
+    }
+
+
+    /* Queries */
 
     @media (min-width:767px) {
       header nav, nav ul {
@@ -193,6 +227,7 @@
       .login_logo, .login_logo_image {
         height: 3rem;
       }
+
     }
 
     @media (min-width:1023px) {
@@ -245,13 +280,37 @@
     </nav>
   </header>
   <main class="layout_grid">
-    <section class="">
-      <div class="card_product">
+    <section class="cards_container layout_grid">
+
+      <div class="product_card">
         <figure>
-          <img src="" alt="">
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
         </figure>
-        <span></span>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
       </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
     </section>
   </main>
 </body>
