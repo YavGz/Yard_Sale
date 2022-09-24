@@ -57,11 +57,16 @@
     /*layout grid  */
     .layout_grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, var(--card-size));
-      place-content: center;
-      gap: 2rem;
+      width: 100%;
       margin: 0 auto;
       padding: 0 4%;
+    }
+    .cards_container {
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, var(--card-size));
+      place-items: center;
+      place-content: center;
+      
     }
 
     /* elements  */
@@ -199,7 +204,6 @@
         grid-template-areas: "logo nav1 none nav2";
         width: 100%;
         padding: 1.5rem 1.5%;
-        margin-bottom: 12%;
         justify-content: space-around;
         box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
         color: var(--very-light-secondary);
@@ -228,6 +232,21 @@
         height: 3rem;
       }
 
+      .layout_grid {
+      display: grid;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1% 4%;
+      }
+
+      .cards_container {
+      padding: 0;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, var(--card-size));
+      place-items: center;
+      place-content: center;
+      
+      }
     }
 
     @media (min-width:1023px) {
@@ -282,6 +301,160 @@
   <main class="layout_grid">
     <section class="cards_container layout_grid">
 
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product_card">
+        <figure>
+          <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
+        </figure>
+        <div class="product_info">
+          <div>
+            <p class="title">$ 250,00</p>
+            <p class="">SmartWatch</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
       <div class="product_card">
         <figure>
           <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image Product">
