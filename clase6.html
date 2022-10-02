@@ -21,7 +21,7 @@
     --hospital-dark: #75af7d;
     --principal-font: 'Quicksand', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
-    --card-size: 24rem;
+    --card-size: 14rem;
     --xsm: 1.2rem;
     --sm: 1.4rem;
     --md: 1.6rem;
@@ -59,16 +59,9 @@
       display: grid;
       width: 100%;
       margin: 0 auto;
-      padding: 0 4%;
+      padding: 0;
     }
-    .cards_container {
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fill, var(--card-size));
-      place-items: center;
-      place-content: center;
-      
-    }
-
+    
     /* elements  */
     .label {
       padding: 0.1rem;
@@ -81,7 +74,7 @@
       font-size: var(--lg);
     }
     
-
+    
     .input {
       width: 30rem;
       height: 3.6rem;
@@ -109,7 +102,7 @@
       transition: all 0.3s;
       background-color: var(--hospital-principal);
     }
-
+    
     .main_button:hover {
       width: 30.5rem;
       height: 4.3rem;
@@ -139,41 +132,54 @@
       font-size: var(--sm);
       color: var(--hospital-principal);
     }
-
+    
     .text_transition:hover{
       cursor: pointer;
       color: var(--hospital-dark);
       transition: color 0.5s;
     }
 
-
+    /* -------- elements  */
+    
+    .cards_container {
+      padding: 0;
+      gap: 1.2rem;
+      row-gap: 2rem;  
+      grid-template-columns: repeat(auto-fill, var(--card-size));
+      place-items: center;
+      place-content: center;
+    }
+    
     .product_info div p:nth-child(2){
       font-size: var(--sm);
     }
-
+    
     .product_card{
       width: var(--card-size);
-      border-radius: 1rem;
-      background-color: var(--text-input-field);
       overflow: hidden;
     }
     
     .product_card figure, .product_card img {
       width: var(--card-size);
-      height: 16rem;
+      height: var(--card-size);
+      border-radius: 1.5rem;
+      object-fit: cover;
     }
     
     .product_info {
       display: flex;
-      height: 4.6rem;
       width: var(--card-size);
-      padding: 0.2rem 1.2rem;
+      height: 5rem;
+      padding: 0.4rem;
       align-items: center;
       justify-content: space-between;
     }
 
     .product_info figure , .product_info img {
+      border-radius: 50%;
       width: 4rem;
+      height: 4rem;
+      box-shadow: 0px 0px 2px 0px rgba(114, 114, 114, 0.4);
     }
 
 
@@ -240,13 +246,40 @@
       }
 
       .cards_container {
-      padding: 0;
+      width: 100%;
+      padding: 0 2%;
+      margin: 0 auto;
       gap: 2rem;
-      grid-template-columns: repeat(auto-fill, var(--card-size));
-      place-items: center;
-      place-content: center;
-      
+      grid-template-columns: repeat(auto-fill, 18rem);
+      align-items: center;
+      justify-content: center; 
       }
+
+      .product_card{
+        width: 18rem;
+        /* height: 20rem; */
+      }
+
+      .product_card figure, .product_card img {
+      width: 18rem;
+      height: 18rem;
+      border-radius: 1.5rem;
+      object-fit: cover;
+      }
+
+      .product_info{
+        width: 18rem;
+        height: 6rem;
+        padding: 0 0.5rem;
+      }
+      
+      .product_info figure , .product_info img {
+        border-radius: 50%;
+        width: 4.5rem;
+        height: 4.5rem;
+        box-shadow: 0px 0px 2px 0px rgba(114, 114, 114, 0.4);
+      }
+
     }
 
     @media (min-width:1023px) {
@@ -299,7 +332,7 @@
     </nav>
   </header>
   <main class="layout_grid">
-    <section class="cards_container layout_grid">
+    <section class="layout_grid cards_container">
 
       <div class="product_card">
         <figure>
