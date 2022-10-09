@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shorcut icon" href="./logos/favicon_yard_sale.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <title>Clase 7</title>
+  <style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #858585;
+    --wrong: #d65959;
+    --very-light-secondary: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-principal: #ACD9B2;
+    --hospital-dark: #75af7d;
+    --principal-font: 'Quicksand', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --xsm: 1.2rem;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --xl: 2rem;  
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: var(--principal-font);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;     
+    }
+
+    /* elements  */
+    .liLink {
+      padding: 0;
+      font-size: var(--sm);
+      font-weight: 700;
+    }
+    
+    .title{
+      font-size: var(--lg);
+    }
+    
+    .text_transition__main:hover{
+      color: var(--hospital-dark);
+      transition: color 0.3s;
+    }
+    
+    .text_transition:hover {
+      color: var(--black);
+      transition: color 0.3s;
+    }
+    
+    /* ----- elements */
+    
+    .desktopMenu {
+      width: 12.5rem;
+      height: auto;
+      padding: 1rem 1.5rem;
+      border: solid 0.1rem rgba(110, 110, 110, 0.35);
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 4px 2px rgba(110, 110, 110, 0.4);
+      text-align: end;
+      
+      
+    }
+    .desktopMenu ul {
+      list-style: none;
+    }
+    .desktopMenu ul a:first-child {
+      padding-top: 0;
+    }
+    
+    .desktopMenu ul a:last-child {
+      color: var(--hospital-principal);
+      padding-bottom: 0;
+      height: auto;
+      margin-top: 0.8rem;
+      border-top: solid 0.1rem rgba(110, 110, 110, 0.35);
+      font-weight: normal;
+    }
+    
+    .desktopMenu a {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      padding: 0.8rem 0;
+      color: var(--dark);
+      text-decoration: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="desktopMenu">
+    <ul>
+      <a href="#">
+        <li class="liLink text_transition">My orders</li>
+      </a>
+      <a href="#">
+        <li class="liLink text_transition">My accoutn </li>
+      </a>
+      <a href="#">
+        <li class="liLink text_transition__main">Sing out</li>
+      </a>
+    </ul>
+  </div>
+</body>
+</html>
