@@ -49,6 +49,8 @@
     
     .title{
       font-size: var(--lg);
+      font-weight: 700;
+      color: var(--black);
     }
     
     .text_transition__main:hover{
@@ -74,7 +76,7 @@
       display: inline-block;
       width: 100%;
       height: auto;
-      padding: 0.8rem 0;
+      padding: 0.9rem 0;
       color: var(--dark);
       text-decoration: none;
     }
@@ -85,17 +87,29 @@
     }
 
     .mobileMenu ul:nth-child(2) {
-      border-top: solid 0.1rem rgba(110, 110, 110, 0.35);
+      padding-top: 3rem;
+      margin-top: 3rem;
+      border-top: solid 0.1rem rgba(110, 110, 110, 0.15);
     }
 
+    .mobileMenu ul:last-child {
+      padding-top: 2rem;
+    }
+    .mobileMenu ul:last-child a:first-child li {
+      font-weight: 100;
+      font-size: var(--xsm);
+    }
     
     .mobileMenu ul:last-child a:last-child {
       color: var(--hospital-principal);
-      padding-bottom: 0;
       height: auto;
-      margin-top: 0.8rem;
+      font-size: var(--xsm);
       font-weight: normal;
     }
+    .mobileMenu ul:last-child a:last-child li {
+      font-size: var(--xsm);
+    }
+
     
     
   </style>
@@ -104,33 +118,33 @@
   <div class="mobileMenu">
     <ul>
       <a href="#">
-        <li class="liLink text_transition">Categories</li>
+        <li class="title">Categories</li>
       </a>
       <a href="#">
         <li class="liLink text_transition">All</li>
       </a>
       <a href="#">
-        <li class="liLink text_transition__main">Clothes</li>
+        <li class="liLink text_transition">Clothes</li>
       </a>
       <a href="#">
-        <li class="liLink text_transition__main">Electronics</li>
+        <li class="liLink text_transition">Electronics</li>
       </a>
       <a href="#">
-        <li class="liLink text_transition__main">Furnitures</li>
+        <li class="liLink text_transition">Furnitures</li>
       </a>
       <a href="#">
-        <li class="liLink text_transition__main">Toys</li>
+        <li class="liLink text_transition">Toys</li>
       </a>
       <a href="#">
-        <li class="liLink text_transition__main">Others</li>
+        <li class="liLink text_transition">Others</li>
       </a>
     </ul>
     <ul>
       <a href="#">
-        <li class="liLink text_transition__main">My orders</li>
+        <li class="liLink text_transition">My orders</li>
       </a>
       <a href="#">
-        <li class="liLink text_transition__main">My account</li>
+        <li class="liLink text_transition">My account</li>
       </a>
     </ul>
     <ul>
