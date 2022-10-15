@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <title>Base</title>
+  <title>My order</title>
   <style>
     :root{
     --white: #FFFFFF;
     --black: #000000;
-    --dark: #232830;
+    --dark: #454545;
     --wrong: #d65959;
-    --very-light-secondary: #C7C7C7;
-    --text-input-field: #F7F7F7;
+    --very-light-secondary: #d6d6d6;
+    --text-input-field: #F7F7F7; 
     --hospital-principal: #ACD9B2;
     --hospital-dark: #75af7d;
     --principal-font: 'Quicksand', sans-serif;
@@ -37,10 +37,11 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;     
+      font-family: 'Quicksand', sans-serif;  
+      font-size: var(--sm);   
     }
 
-    /* elements  */
+    /* elements ---------- */
     .label {
       padding: 0.1rem;
       font-size: var(--sm);
@@ -51,74 +52,103 @@
       font-size: var(--lg);
     }
     
+    /* --------- elements  */
 
-    .input {
-      width: 30rem;
-      height: 3.6rem;
-      padding: 0 2%;
-      border-radius: 1rem;
-      border: solid 0;
-      background-color: var(--text-input-field);
+    .orderContainer {
+      min-width: 32rem;
+      max-width: 40rem;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      padding: 0 1rem;
+      row-gap: 2rem;
     }
 
-    .input::placeholder {
-      color: var(--very-light-secondary);
+    .orderContainer h1 {
+      justify-self: left;
+      padding-top: 1.8rem;
+    }
+
+    .orderContainer_total {
+      display: flex;
+      width: 100%;
+      height: auto;
+      padding: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--very-light-secondary);
+      border-radius: 2rem;
+    }
+
+    .orderContainer_total p:nth-child(1){
+      width: 8rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .orderCard {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1rem 0 0;
+      align-items: center;
+      justify-content: space-between;
     }
     
-    .button {
-      width: 30rem;
-      height: 4.2rem;
-      min-height: 3.5rem;
-      border: solid 0;
-      border-radius: 1rem;
-    }
-    
-    .main_button {
-      font-weight: 700;
-      color: var(--white);
-      transition: all 0.3s;
-      background-color: var(--hospital-principal);
+    .orderCard figure, .orderCard img {
+      width: 8rem;
+      height: 8rem;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 1.5rem;
     }
 
-    .main_button:hover {
-      width: 30.5rem;
-      height: 4.3rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      background-color: var(--hospital-dark);
-    }
     
-    .second_button {
-      font-weight: 700;
-      color: var(--hospital-principal);
-      background-color: var(--white);
-      border: solid 0.2rem var(--hospital-principal);
-      transition: all 0.3s;
-    }
-    .second_button:hover {
-      width: 30.5rem;
-      height: 4.3rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    
-    .link{
-      height: var(--xl);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: var(--sm);
-      color: var(--hospital-principal);
+    .orderCard p:nth-child(2) {
+      display: inline-block;
+      padding-right: 2rem;
     }
 
-    .text_transition:hover{
-      cursor: pointer;
-      color: var(--hospital-dark);
-      transition: color 0.5s;
-    }
-
-  </style>
+    </style>
 </head>
 <body>
-
+  <main class="orderContainer">
+    <h1 class="title">My order</h1>
+    <div class="orderContainer_total">
+      <p>
+        <span class="label">04.25.2022</span>
+        <span>6 articles</span>
+      </p>
+      <p>$560.00</p>
+    </div>
+    <div class="orderCard">
+      <figure>
+        <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      </figure>
+      <p>Smartband</p>
+      <p>$45.00</p>
+    </div>
+    <div class="orderCard">
+      <figure>
+        <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      </figure>
+      <p>Smartband</p>
+      <p>$45.00</p>
+    </div>
+    <div class="orderCard">
+      <figure>
+        <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      </figure>
+      <p>Smartband</p>
+      <p>$45.00</p>
+    </div>
+    <div class="orderCard">
+      <figure>
+        <img src="https://images.pexels.com/photos/437038/pexels-photo-437038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      </figure>
+      <p>Smartband</p>
+      <p>$45.00</p>
+    </div>
+  </main>
 </body>
 </html>
