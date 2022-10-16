@@ -53,13 +53,6 @@
       margin: 0 auto;
     }
 
-    /*layout grid  */
-    .layout_grid {
-      display: grid;
-      place-items: center;
-      margin: 0 auto;
-      padding: 0 4%;
-    }
 
     /* elements  */
     .label {
@@ -86,11 +79,12 @@
       header {
         display: grid;
         grid-template-columns: 1fr minmax(40rem, 2fr) 0.2fr 2fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1rem;
         grid-template-areas: "logo nav1 none nav2";
         width: 100%;
-        padding: 1.5rem 1.5%;
-        justify-content: space-around;
+        height: 5rem;
+        padding: 1.5rem;
+        align-content: center;
         align-items: center;
         box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
       }
@@ -98,9 +92,11 @@
       header nav, nav ul {
         display: flex;
         width: 100%;
+        height: 3rem;
         font-size: var(--sm);
         justify-content: space-evenly;
         align-items: center;
+        list-style: none;
       }
 
       nav li a {
@@ -109,22 +105,24 @@
         font-weight: 700;
       }
 
-      nav li, nav li{
+      nav li a{
         transition: all 0.3s;
         padding: 0.3rem 0.8rem;
         border: 1px solid var(--white);
         border-radius: 0.5rem;
       }
-      
-      nav li:hover {
-        cursor: pointer;
-        border: 1px solid var(--hospital-principal);
+
+      .login_nav ul li:last-child a {
+        border: none;
       }
       
       nav li a:hover {
+        cursor: pointer;
+        border: 1px solid var(--hospital-principal);
         color: var(--hospital-principal) ;
-      }
 
+      }
+      
       header figure {
         grid-area: logo;
       }
@@ -135,20 +133,12 @@
         font-weight: 700;
       }
 
-      nav ul, ul li {
-        list-style: none;
-      }
-
       .login_logo, .login_logo_image {
         height: 3rem;
       }
+
     }
 
-    @media (min-width:1023px) {
-      header{
-        padding: 1.5rem 4%;
-      }
-    }
   </style>
 </head>
 <body>
