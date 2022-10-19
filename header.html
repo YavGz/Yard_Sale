@@ -39,34 +39,77 @@
       box-sizing: border-box;
       font-family: 'Quicksand', sans-serif;     
     }
-
-    header nav {
-      display: none;
-    }
-
-    .header_logo, .login_logo_image{
-      width: 20rem;
-      height: 4rem;
-      margin: 0 auto;
-    }
-
-
-    /* elements  */
-
+    
+    /* elements ----  */
     .label {
       padding: 0.1rem;
       font-size: var(--sm);
       font-weight: 700;
     }
+    /* ---- elements  */
     
+    
+    header {
+      display: flex;
+      width: 100%;
+      padding: 1rem 2rem;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
+    }
+    
+    ul li {
+      list-style: none;
+    }
+    
+    .sections_nav, .nav_email {
+      display: none;
+    }
+
+    .header_logo, .header_logo_image{
+      width: 18rem;
+      /* height: 4rem; */
+    }
+    
+
+    .nav_shopping_cart {
+        padding: 0 ;
+        position: relative;
+      }
+
+    .nav_shopping_cart div {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      background-color: var(--hospital-principal);
+      font-size: var(--xsm);
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 1.5rem;
+      right: 0rem;
+    }
+
+
+
+
     
     /* Queries */
     
     @media (min-width:767px) {
-      
+       
+      .ham_menu {
+        display: none;
+      }
+
       header {
         display: grid;
-        grid-template-columns: minmax(15rem, 16rem) minmax(38rem, 42rem) minmax(2rem, 10rem) minmax(22rem, 28rem);
+        grid-template-columns: minmax(15rem, 16rem) minmax(38rem, 42rem) 1fr minmax(22rem, 28rem);
         grid-template-rows: 1rem;
         grid-template-areas: "logo nav1 none nav2";
         width: 100%;
@@ -75,7 +118,10 @@
         margin: 0 auto;
         align-content: center;
         align-items: center;
-        box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
+      }
+
+      .sections_nav, .nav_email {
+        display: block;
       }
       
       header nav, nav ul {
@@ -129,8 +175,9 @@
       }
 
       .header_logo, .header_logo_image {
-        padding-left: 2.5%;
-        height: 3rem;
+        max-width: 15rem;
+        margin: 0 auto;
+        height: auto;
       }
       
       .nav_shopping_cart {
@@ -160,16 +207,28 @@
 
     header {
       width: 100%;
-      padding: 0 10rem;
-      grid-template-columns: minmax(15rem, 20rem) minmax(38rem, 50rem) 1fr minmax(22rem, 30rem);
+      padding: 0 8rem;
+      /* grid-template-columns: minmax(15rem, 16rem) minmax(38rem, 42rem) 1fr minmax(22rem, 28rem); */
+      grid-template-columns: minmax(16rem, 25rem) minmax(38rem, 42rem) 1fr minmax(18rem, 25rem);
+      grid-template-rows: 1rem;
+      grid-template-areas: "logo nav1 none nav2";
     }
 
+    .header_logo, .header_logo_image {
+      max-width: 15rem;
+      padding-left: 3%;
+      margin: 0 auto;
+      height: auto;
+    }
 }
 
   </style>
 </head>
 <body>
   <header>
+    <a href="#" class="ham_menu">
+      <img class="ham_menu" src="./icons/icon_menu.svg" alt="">
+    </a>
     <a href="#">
       <figure class="header_logo">
         <img class="header_logo_image" src="./logos/logo_yard_sale.svg" alt="Yard Sale logo">
@@ -211,7 +270,7 @@
     </nav>
     <nav class="rigth_nav">
       <ul>
-        <li class="">
+        <li class="nav_email">
           email@example.com
         </li>
         <li class="nav_shopping_cart">
