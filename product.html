@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shorcut icon" href="./logos/favicon_yard_sale.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <title>Base</title>
+  <style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --wrong: #d65959;
+    --very-light-secondary: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-principal: #ACD9B2;
+    --hospital-dark: #75af7d;
+    --principal-font: 'Quicksand', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --xsm: 1.2rem;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --xl: 2rem;  
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: var(--principal-font);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;     
+    }
+
+    header {
+      padding: 8rem 0 4rem;
+    }
+    header nav {
+      display: none;
+    }
+
+    .login_logo, .login_logo_image{
+      width: 20rem;
+      height: 4rem;
+      margin: 0 auto;
+    }
+
+    /*layout grid  */
+    .layout_grid {
+      display: grid;
+      place-items: center;
+      margin: 0 auto;
+      padding: 0 4%;
+    }
+
+    /* elements  */
+    .label {
+      padding: 0.1rem;
+      font-size: var(--sm);
+      font-weight: 700;
+    }
+    
+    .title{
+      font-size: var(--lg);
+    }
+    
+
+    .input {
+      width: 30rem;
+      height: 3.6rem;
+      padding: 0 2%;
+      border-radius: 1rem;
+      border: solid 0;
+      background-color: var(--text-input-field);
+    }
+
+    .input::placeholder {
+      color: var(--very-light-secondary);
+    }
+    
+    .button {
+      width: 30rem;
+      height: 4.2rem;
+      min-height: 3.5rem;
+      border: solid 0;
+      border-radius: 1rem;
+    }
+    
+    .main_button {
+      font-weight: 700;
+      color: var(--white);
+      transition: all 0.3s;
+      background-color: var(--hospital-principal);
+    }
+
+    .main_button:hover {
+      width: 30.5rem;
+      height: 4.3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: var(--hospital-dark);
+    }
+    
+    .second_button {
+      font-weight: 700;
+      color: var(--hospital-principal);
+      background-color: var(--white);
+      border: solid 0.2rem var(--hospital-principal);
+      transition: all 0.3s;
+    }
+    .second_button:hover {
+      width: 30.5rem;
+      height: 4.3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .link{
+      height: var(--xl);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: var(--sm);
+      color: var(--hospital-principal);
+    }
+
+    .text_transition:hover{
+      cursor: pointer;
+      color: var(--hospital-dark);
+      transition: color 0.5s;
+    }
+
+    /* Queries */
+
+
+    @media (min-width:767px) {
+      header nav, nav ul {
+        display: flex;
+        width: 100%;
+        font-size: var(--sm);
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      nav li {
+        transition: all 0.3s;
+      }
+      
+      nav li:hover {
+        cursor: pointer;
+        color: #a3a3a3 ;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr minmax(40rem, 2fr) 0.2fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo nav1 none nav2";
+        width: 100%;
+        padding: 1.5rem 1.5%;
+        margin-bottom: 12%;
+        justify-content: space-around;
+        box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
+        color: var(--very-light-secondary);
+      }
+
+      header figure {
+        grid-area: logo;
+      }
+      
+      .section_nav {
+        background-color: var(--hospital-dark);
+        grid-area: nav1;
+      }
+
+      .login_nav {
+        grid-area: nav2;
+        color: var(--hospital-principal);
+        font-weight: 700;
+      }
+
+      nav ul, ul li {
+        list-style: none;
+      }
+
+      .login_logo, .login_logo_image {
+        height: 3rem;
+      }
+    }
+
+    @media (min-width:1023px) {
+      header{
+        padding: 1.5rem 4%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="layout_grid">
+    <h3 class="title">Titulo</h3>
+    <label class="label" for="">Label</label>
+    <input type="text" class="input" placeholder="Input">
+    <button class="button">Boton</button>
+    <button class="button main_button">Main button</button>
+    <button class="button second_button">Second button</button>
+    <a href="" class="link text_transition">A href</a>
+  </main>
+</body>
+</html>

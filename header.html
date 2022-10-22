@@ -95,6 +95,10 @@
       right: 0rem;
     }
 
+    .rigth_nav ul li:nth-child(2) img {
+      display: none;
+    }
+
 
 
 
@@ -109,12 +113,12 @@
 
       header {
         display: grid;
-        grid-template-columns: minmax(15rem, 16rem) minmax(38rem, 42rem) 1fr minmax(22rem, 28rem);
+        grid-template-columns: 12rem 30rem 0.2rem 20rem;
         grid-template-rows: 1rem;
         grid-template-areas: "logo nav1 none nav2";
         width: 100%;
         height: 5rem;
-        padding: 1.2rem;
+        padding: 0.8rem;
         margin: 0 auto;
         align-content: center;
         align-items: center;
@@ -122,6 +126,11 @@
 
       .sections_nav, .nav_email {
         display: block;
+      }
+
+      .sections_nav ul li a{
+        font-weight: 400;
+        margin: 0 auto;
       }
       
       header nav, nav ul {
@@ -155,6 +164,14 @@
         color: var(--very-ligh);
         font-size: var(--xsm);
       }
+
+      .rigth_nav ul li:nth-child(2) img {
+        display: initial;
+        padding-top: 1.8rem;
+        padding-left: 0.5rem;
+        transform: rotate(90deg);
+        cursor: pointer;
+      }
       
       nav li a:hover {
         cursor: pointer;
@@ -168,14 +185,16 @@
       }
 
       .rigth_nav {
+        display: flex;
         max-width: 25rem;
         grid-area: nav2;
         font-weight: 400;
         justify-self: flex-end;
+        justify-content: space-evenly;
       }
 
       .header_logo, .header_logo_image {
-        max-width: 15rem;
+        max-width: 12rem;
         margin: 0 auto;
         height: auto;
       }
@@ -208,7 +227,6 @@
     header {
       width: 100%;
       padding: 0 8rem;
-      /* grid-template-columns: minmax(15rem, 16rem) minmax(38rem, 42rem) 1fr minmax(22rem, 28rem); */
       grid-template-columns: minmax(16rem, 25rem) minmax(38rem, 42rem) 1fr minmax(18rem, 25rem);
       grid-template-rows: 1rem;
       grid-template-areas: "logo nav1 none nav2";
@@ -272,6 +290,9 @@
       <ul>
         <li class="nav_email">
           email@example.com
+        <li>
+          <img src="./icons/flechita.svg" alt="">
+        </li>
         </li>
         <li class="nav_shopping_cart">
           <a href="#">
