@@ -4,213 +4,110 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shorcut icon" href="./logos/favicon_yard_sale.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <title>Base</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
   <style>
-    :root{
-    --white: #FFFFFF;
-    --black: #000000;
-    --dark: #232830;
-    --wrong: #d65959;
-    --very-light-secondary: #C7C7C7;
-    --text-input-field: #F7F7F7;
-    --hospital-principal: #ACD9B2;
-    --hospital-dark: #75af7d;
-    --principal-font: 'Quicksand', sans-serif;
-    --secondary-font: 'Roboto', sans-serif;
-    --xsm: 1.2rem;
-    --sm: 1.4rem;
-    --md: 1.6rem;
-    --lg: 1.8rem;
-    --xl: 2rem;  
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
     }
-
-    html {
-      font-size: 62.5%;
-      font-family: var(--principal-font);
-    }
-
-    * {
-      padding: 0;
+    body {
       margin: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;     
+      font-family: 'Quicksand', sans-serif;
     }
-
-    header {
-      padding: 8rem 0 4rem;
+    .product-detail {
+      width: 360px;
+      padding-bottom: 24px;
+      position: absolute;
+      right: 0;
     }
-    header nav {
-      display: none;
+    .product-detail-close {
+      background: var(--white);
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 2;
+      padding: 12px;
+      border-radius: 50%;
     }
-
-    .login_logo, .login_logo_image{
-      width: 20rem;
-      height: 4rem;
-      margin: 0 auto;
+    .product-detail-close:hover {
+      cursor: pointer;
     }
-
-    /*layout grid  */
-    .layout_grid {
-      display: grid;
-      place-items: center;
-      margin: 0 auto;
-      padding: 0 4%;
+    .product-detail > img:nth-child(2) {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 0 0 20px 20px;
     }
-
-    /* elements  */
-    .label {
-      padding: 0.1rem;
+    .product-info {
+      margin: 24px 24px 0 24px;
+    }
+    .product-info p:nth-child(1) {
+      font-weight: bold;
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    .product-info p:nth-child(2) {
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 36px;
+    }
+    .product-info p:nth-child(3) {
+      color: var(--very-light-pink);
       font-size: var(--sm);
-      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 36px;
     }
-    
-    .title{
-      font-size: var(--lg);
-    }
-    
-
-    .input {
-      width: 30rem;
-      height: 3.6rem;
-      padding: 0 2%;
-      border-radius: 1rem;
-      border: solid 0;
-      background-color: var(--text-input-field);
-    }
-
-    .input::placeholder {
-      color: var(--very-light-secondary);
-    }
-    
-    .button {
-      width: 30rem;
-      height: 4.2rem;
-      min-height: 3.5rem;
-      border: solid 0;
-      border-radius: 1rem;
-    }
-    
-    .main_button {
-      font-weight: 700;
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
       color: var(--white);
-      transition: all 0.3s;
-      background-color: var(--hospital-principal);
-    }
-
-    .main_button:hover {
-      width: 30.5rem;
-      height: 4.3rem;
-      font-size: 1.5rem;
+      width: 100%;
       cursor: pointer;
-      background-color: var(--hospital-dark);
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
     }
-    
-    .second_button {
-      font-weight: 700;
-      color: var(--hospital-principal);
-      background-color: var(--white);
-      border: solid 0.2rem var(--hospital-principal);
-      transition: all 0.3s;
+    .add-to-cart-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .second_button:hover {
-      width: 30.5rem;
-      height: 4.3rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    
-    .link{
-      height: var(--xl);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: var(--sm);
-      color: var(--hospital-principal);
-    }
-
-    .text_transition:hover{
-      cursor: pointer;
-      color: var(--hospital-dark);
-      transition: color 0.5s;
-    }
-
-    /* Queries */
-
-
-    @media (min-width:767px) {
-      header nav, nav ul {
-        display: flex;
+    @media (max-width: 640px) {
+      .product-detail {
         width: 100%;
-        font-size: var(--sm);
-        justify-content: space-evenly;
-        align-items: center;
-      }
-
-      nav li {
-        transition: all 0.3s;
-      }
-      
-      nav li:hover {
-        cursor: pointer;
-        color: #a3a3a3 ;
-      }
-
-      header {
-        display: grid;
-        grid-template-columns: 1fr minmax(40rem, 2fr) 0.2fr 2fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "logo nav1 none nav2";
-        width: 100%;
-        padding: 1.5rem 1.5%;
-        margin-bottom: 12%;
-        justify-content: space-around;
-        box-shadow: 0 0.2rem 0.5rem 0 var(--very-light-secondary);
-        color: var(--very-light-secondary);
-      }
-
-      header figure {
-        grid-area: logo;
-      }
-      
-      .section_nav {
-        background-color: var(--hospital-dark);
-        grid-area: nav1;
-      }
-
-      .login_nav {
-        grid-area: nav2;
-        color: var(--hospital-principal);
-        font-weight: 700;
-      }
-
-      nav ul, ul li {
-        list-style: none;
-      }
-
-      .login_logo, .login_logo_image {
-        height: 3rem;
-      }
-    }
-
-    @media (min-width:1023px) {
-      header{
-        padding: 1.5rem 4%;
       }
     }
   </style>
 </head>
 <body>
-  <main class="layout_grid">
-    <h3 class="title">Titulo</h3>
-    <label class="label" for="">Label</label>
-    <input type="text" class="input" placeholder="Input">
-    <button class="button">Boton</button>
-    <button class="button main_button">Main button</button>
-    <button class="button second_button">Second button</button>
-    <a href="" class="link text_transition">A href</a>
-  </main>
+  <aside class="product-detail">
+    <div class="product-detail-close">
+      <img src="./icons/icon_close.png" alt="close">
+    </div>
+    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+    <div class="product-info">
+      <p>$35,00</p>
+      <p>Bike</p>
+      <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+      <button class="primary-button add-to-cart-button">
+        <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+        Add to cart
+      </button>
+    </div>
+  </aside>
 </body>
 </html>
